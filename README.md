@@ -76,8 +76,6 @@
 
 ## اسکرین‌شات‌ها
 
-> برای افزودن اسکرین‌شات‌های واقعی، فایل‌ها را در پوشه‌ی `docs/screenshots/` قرار دهید.
-
 ### حالت روشن (Light Mode)
 
 <p align="center">
@@ -126,7 +124,7 @@
 
 ```bash
 # کلون کردن پروژه
-git clone https://github.com/USERNAME/wd-planner.git
+git clone https://github.com/W3stchester/WDP.git
 cd wd-planner
 
 # نصب وابستگی‌ها
@@ -136,7 +134,7 @@ npm install
 npm run dev
 ```
 
-سپس مرورگر را روی `http://localhost:5173` باز کنید.
+سپس مرورگر را روی `http://localhost:3000` باز کنید.
 
 ### build تولیدی
 
