@@ -261,102 +261,6 @@ npm run build
 
 ---
 
-## انتقال به گیت‌هاب
-
-### مرحله ۱: ساخت ریپو در گیت‌هاب
-1. به [github.com](https://github.com) بروید
-2. روی **New repository** کلیک کنید
-3. نام ریپو را `wd-planner` (یا هر نام دلخواه) بگذارید
-4. **Public** را انتخاب کنید
-5. روی **Create repository** کلیک کنید
-
-### مرحله ۲: آماده‌سازی فایل .gitignore
-یک فایل `.gitignore` در ریشه‌ی پروژه بسازید:
-
-```gitignore
-# Dependencies
-node_modules/
-
-# Build output
-dist/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-
-# Environment
-.env
-.env.local
-```
-
-### مرحله ۳: init و commit
-```bash
-# در پوشه‌ی پروژه
-git init
-git add .
-git commit -m "feat: initial release — W.D. Planner v1.4.6
-
-- Daily planning with Jalali calendar
-- Default + custom review system
-- Custom time picker with drag support
-- Minimal professional design
-- Light/dark theme
-- Offline-first (IndexedDB)"
-```
-
-### مرحله ۴: اتصال به گیت‌هاب و push
-```bash
-# اگر از HTTPS استفاده می‌کنید
-git remote add origin https://github.com/USERNAME/wd-planner.git
-git branch -M main
-git push -u origin main
-
-# یا اگر از SSH استفاده می‌کنید
-git remote add origin git@github.com:USERNAME/wd-planner.git
-git branch -M main
-git push -u origin main
-```
-
-### مرحله ۵: افزودن اسکرین‌شات‌ها
-1. اپ را با `npm run dev` اجرا کنید
-2. از بخش‌های مختلف اسکرین‌شات بگیرید
-3. آن‌ها را در پوشه‌ی `docs/screenshots/` قرار دهید:
-   ```
-   docs/screenshots/
-   ├── light-main.png
-   ├── dark-main.png
-   ├── add-form.png
-   ├── jalali-picker.png
-   ├── time-picker.png
-   └── custom-reviews.png
-   ```
-4. تغییرات را commit و push کنید:
-   ```bash
-   git add docs/screenshots/
-   git commit -m "docs: add screenshots"
-   git push
-   ```
-
-### مرحله ۶: تنظیم توضیحات ریپو
-در صفحه‌ی گیت‌هاب:
-1. روی **About** (سمت راست) کلیک کنید
-2. توضیحات کوتاه اضافه کنید:
-   > 📅 برنامه‌ریز روزانه آفلاین با تقویم شمسی، مرورهای هوشمند، و طراحی مینیمال
-3. تگ‌ها اضافه کنید: `react`, `vite`, `tailwindcss`, `jalali`, `planner`, `offline`
-4. وب‌سایت (اختیاری): لینک دمو (اگر روی Vercel/Netlify مستقر کردید)
-
----
-
 ## نسخه‌ها
 
 ### v1.4.6 (نسخه فعلی)
@@ -389,10 +293,8 @@ git push -u origin main
 
 **Westchester** — [Westchester.ir](https://Westchester.ir)
 
-قدرت‌گرفته از Claude 4.7 Opus از Anthropic
-
 ---
 
 <p align="center">
-  ساخته‌شده با ❤️ برای دانشجویان ایرانی
+  ساخته‌شده با ❤️ برای دانش‌آموزان و دانشجویان فارسی‌زبان
 </p>
