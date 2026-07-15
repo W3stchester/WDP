@@ -125,7 +125,7 @@
 ```bash
 # کلون کردن پروژه
 git clone https://github.com/W3stchester/WDP.git
-cd wd-planner
+cd WDP
 
 # نصب وابستگی‌ها
 npm install
