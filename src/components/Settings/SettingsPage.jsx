@@ -156,7 +156,6 @@ export default function SettingsPage() {
           <div className="text-sm text-gray-700 dark:text-zinc-200">
             توسعه‌دهنده: <a className="text-blue-600 dark:text-blue-400 hover:underline" href="https://Westchester.ir" target='_blank' rel="noreferrer">Westchester</a>
           </div>
-          <div className="text-[10px] text-gray-400 dark:text-zinc-500">قدرت‌گرفته از Claude 4.7 Opus از Anthropic</div>
           <div className="text-[10px] text-gray-400 dark:text-zinc-500 mt-0.5">نسخه {VERSION} — نسخه آفلاین</div>
         </div>
       </div>
