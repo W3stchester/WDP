@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Alibaba';
+  src: url('/src/assets/fonts/Alibaba-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Alibaba', 'Vazirmatn', Tahoma, sans-serif;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #f9fafb;
+  min-height: 100vh;
+}
+
+/* Dark mode background */
+.dark body {
+  background: #09090b;
+  color-scheme: dark;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Dark mode: invert calendar picker icons */
+.dark input[type="time"]::-webkit-calendar-picker-indicator,
+.dark input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8);
+}
+
+input, select, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Remove default focus outline from all elements */
+*:focus {
+  outline: none;
+}
+
+/* Disable keyboard accessibility outline on buttons */
+button:focus,
+button:focus-visible,
+a:focus,
+a:focus-visible,
+[role="button"]:focus,
+[role="button"]:focus-visible {
+  outline: none;
+}
+
+/* Hide scrollbars globally (scroll still works via wheel/keyboard/touch) */
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-track {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  display: none !important;
+}
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+html, body { scrollbar-width: none; }
+
+/* ═══════════════════════════════════════════════════
+   Minimal design system
+   ═══════════════════════════════════════════════════ */
+@layer components {
+  .surface-card {
+    @apply bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl shadow-sm;
+  }
+
+  .surface-modal {
+    @apply bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-2xl shadow-xl;
+  }
+
+  .surface-nav {
+    @apply bg-white dark:bg-zinc-950 border-gray-200 dark:border-zinc-800;
+  }
+
+  .chip {
+    @apply rounded-lg bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-zinc-300
+           hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors;
+  }
+
+  .chip-active {
+    @apply rounded-lg bg-blue-600 text-white shadow-sm;
+  }
+
+  .input-base {
+    @apply w-full rounded-lg bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700
+           px-3 py-2 text-sm text-gray-900 dark:text-zinc-100
+           outline-none transition-colors
+           focus:bg-white dark:focus:bg-zinc-900
+           focus:border-blue-500 dark:focus:border-blue-500
+           placeholder:text-gray-400 dark:placeholder:text-zinc-500;
+  }
+
+  .btn {
+    @apply rounded-lg px-4 py-2 text-sm font-medium transition-colors outline-none;
+  }
+  .btn-primary {
+    @apply btn bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800;
+  }
+  .btn-secondary {
+    @apply btn bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-zinc-300
+           hover:bg-gray-200 dark:hover:bg-zinc-700;
+  }
+  .btn-danger {
+    @apply btn bg-red-500 text-white hover:bg-red-600 active:bg-red-700;
+  }
+  .btn-ghost {
+    @apply btn text-gray-600 dark:text-zinc-400 hover:bg-gray-100 dark:hover:bg-zinc-800;
+  }
+}
+
+/* ───────── Animations ───────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(20px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(-20px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
